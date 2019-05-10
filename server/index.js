@@ -17,6 +17,7 @@ const controller = require('./controller')
 //database
 massive(CONNECTION_STRING)
     .then(db => { 
+        db.init()
         console.log('connected to database')
     }).catch(err => { 
         console.log('failed to connect to database')
